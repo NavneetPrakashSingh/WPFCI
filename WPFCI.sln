@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30204.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFCI", "WPFCI\WPFCI.csproj", "{77EE71CC-E83D-4ABC-8FA0-8F67878506C8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77EE71CC-E83D-4ABC-8FA0-8F67878506C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77EE71CC-E83D-4ABC-8FA0-8F67878506C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77EE71CC-E83D-4ABC-8FA0-8F67878506C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77EE71CC-E83D-4ABC-8FA0-8F67878506C8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {06CFD98A-C042-4BEB-8665-F8F998B3728E}
+	EndGlobalSection
+EndGlobal
