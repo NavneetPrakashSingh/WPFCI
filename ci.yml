@@ -58,9 +58,9 @@ jobs:
     # Update the version before build
     - name: Update manifest version
       run: |
-        [xml]$manifest = get-content "\$env:Wap_Project_Directory\Package.appxmanifest"
+        [xml]$manifest = get-content ".\$env:Wap_Project_Directory\Package.appxmanifest"
         $manifest.Package.Identity.Version = "$env:NBGV_SimpleVersion.0"
-        $manifest.save("\$env:Wap_Project_Directory\Package.appxmanifest")
+        $manifest.save(".\$env:Wap_Project_Directory\Package.appxmanifest")
 
     # Test
     - name: Execute Unit Tests 
@@ -84,7 +84,7 @@ jobs:
     # Build the Windows Application Packaging project
     - name: Build the Windows Application Packaging Project (wapproj)
       run: msbuild $env:Solution_Path /p:Platform=$env:TargetPlatform /p:Configuration=$env:Configuration /p:UapAppxPackageBuildMode=$env:BuildMode /p:AppxBundle=$env:AppxBundle /p:PackageCertificateKeyFile=$env:SigningCertificate /p:PackageCertificatePassword=${{ secrets.Pfx_Key }}
-      env: 
+      env:
         AppxBundle: Never
         BuildMode: SideloadOnly
         Configuration: Debug
