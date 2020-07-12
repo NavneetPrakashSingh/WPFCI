@@ -20,8 +20,8 @@ jobs:
 
     strategy:
       matrix:
-        targetplatform: [x86, x64]
-
+        targetplatform: [x64]
+         
     runs-on: windows-latest
 
     env:
@@ -62,9 +62,8 @@ jobs:
         $manifest.Package.Identity.Version = "$env:NBGV_SimpleVersion.0"
         $manifest.save(".\$env:Wap_Project_Directory\Package.appxmanifest")
 
-    # Test
-    - name: Execute Unit Tests
-      run: dotnet test $env:Test_Project_Path
+    - name: Restore nuget package
+    run: nuget package restore
 
     # Restore the application
     - name:  Restore the Wpf application to populate the obj folder
