@@ -58,9 +58,9 @@ jobs:
     # Update the version before build
     - name: Update manifest version
       run: |
-        [xml]$manifest = get-content ".\$env:Wap_Project_Directory\Package.appxmanifest"
+        [xml]$manifest = get-content "\$env:Wap_Project_Directory\Package.appxmanifest"
         $manifest.Package.Identity.Version = "$env:NBGV_SimpleVersion.0"
-        $manifest.save(".\$env:Wap_Project_Directory\Package.appxmanifest")
+        $manifest.save("\$env:Wap_Project_Directory\Package.appxmanifest")
 
     # Test
     - name: Execute Unit Tests 
