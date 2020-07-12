@@ -20,6 +20,7 @@ namespace WPFCI
     /// </summary>
     public partial class MainWindow : Window
     {
+        Operations operation = new Operations();
         public MainWindow()
         {
             InitializeComponent();
@@ -30,12 +31,7 @@ namespace WPFCI
             int a = Convert.ToInt32(first_number.Text);
             int b = Convert.ToInt32(second_number.Text);
 
-            result.Text = calculate(a, b).ToString();
-        }
-
-        private int calculate(int first_number, int second_number)
-        {
-            return first_number + second_number;
+            result.Text = operation.add(a, b).ToString();
         }
     }
 }
