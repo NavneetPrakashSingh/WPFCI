@@ -86,6 +86,10 @@ jobs:
         Configuration: Debug
         TargetPlatform: ${{ matrix.targetplatform }}
 
+    # Create the exe file
+    - name: Creating exe file
+      run: msbuild $env:Solution_Path /p:Configuration=Release  
+
     # Remove the .pfx
     - name: Remove the .pfx
       run: Remove-Item -path $env:Wap_Project_Directory\$env:SigningCertificate
