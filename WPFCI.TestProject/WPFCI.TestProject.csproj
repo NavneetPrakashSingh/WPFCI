@@ -7,7 +7,7 @@
     <IsPackable>false</IsPackable>
     <SelfContained>false</SelfContained>
     <UseAppHost>true</UseAppHost>
-    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
   </PropertyGroup>
 
   <ItemGroup>
