@@ -1,16 +1,13 @@
+
+
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-<RuntimeIdentifier>win-x86</RuntimeIdentifier>
     <IsPackable>false</IsPackable>
-    <SelfContained>true</SelfContained>
-<UseAppHost>true</UseAppHost>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-
+    <SelfContained>false</SelfContained>
+    <UseAppHost>true</UseAppHost>
+    <RuntimeIdentifier>win-x86</RuntimeIdentifier>
   </PropertyGroup>
 
   <ItemGroup>
