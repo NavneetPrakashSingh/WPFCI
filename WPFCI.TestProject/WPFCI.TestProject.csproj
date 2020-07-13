@@ -2,12 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+<RuntimeIdentifier>win-x86</RuntimeIdentifier>
     <IsPackable>false</IsPackable>
+    <SelfContained>true</SelfContained>
+<UseAppHost>true</UseAppHost>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <PlatformTarget>AnyCPU</PlatformTarget>
+
   </PropertyGroup>
 
   <ItemGroup>
